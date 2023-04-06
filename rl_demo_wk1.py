@@ -13,7 +13,7 @@ also use rand.gauss(0, 1) instead of i
 
 import random as rand
 
-N = 2
+N = 1000
 
 def average1():
     sum = 0
@@ -31,7 +31,9 @@ def average2():
 def average3():
     avg = 0
     for i in range(1, N):
-        avg = i #fix this
+        #Q = Q + a*(R - Q) - did you stil want us to use the rand.gauss distribution?
+        #avg = avg + (1.0/rand.gauss(0,1))*(rand.gauss(0,1) - avg)
+        avg = avg + (1.0/i)*(i - avg)
     print('avg3', avg)
 
 
