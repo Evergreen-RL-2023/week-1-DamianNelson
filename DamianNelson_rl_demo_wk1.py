@@ -1,4 +1,6 @@
 '''
+Damian Nelson
+
 computing averages and 1-armed bandit
 
 3 ways to compute averages
@@ -31,9 +33,8 @@ def average2():
 def average3():
     avg = 0
     for i in range(1, N):
-        #Q = Q + a*(R - Q) - did you stil want us to use the rand.gauss distribution?
-        #avg = avg + (1.0/rand.gauss(0,1))*(rand.gauss(0,1) - avg)
-        avg = avg + (1.0/i)*(i - avg)
+        avg = avg + (1.0/i)*(rand.gauss(0,1) - avg)
+        #avg = avg + (1.0/i)*(i - avg)
     print('avg3', avg)
 
 
